@@ -37,7 +37,6 @@ The application is a simple Python Flask web application that:
 
 ## Project Structure
 
-```text
 hello_flask/
 ├── Dockerfile
 ├── app.py

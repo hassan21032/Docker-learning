@@ -184,30 +184,30 @@ Solved by creating a custom Docker network and explicitly attaching services.
 
 ## Docker Commands Practised/Used
 
-# Build Docker image
+## Build Docker image
 docker build -t hello-flask .
 
-# Run container locally
+## Run container locally
 docker run -d -p 5002:5002 hello-flask
 
-# List images and containers
+## List images and containers
 docker images
 docker ps
 docker ps -a
 
-# Docker networking
+## Docker networking
 docker network create my-app-network
 docker network ls
 
-# Authenticate with AWS
+## Authenticate with AWS
 aws configure
 aws sts get-caller-identity
 
-# Login to AWS ECR
+## Login to AWS ECR
 aws ecr get-login-password --region <region> \
 | docker login --username AWS --password-stdin <account_id>.dkr.ecr.<region>.amazonaws.com
 
-# Tag and push image to ECR
+## Tag and push image to ECR
 docker tag hello-flask:latest <account_id>.dkr.ecr.<region>.amazonaws.com/hello-flask:latest
 docker push <account_id>.dkr.ecr.<region>.amazonaws.com/hello-flask:latest
 
